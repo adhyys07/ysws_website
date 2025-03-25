@@ -26,8 +26,18 @@
     white-space: nowrap; /* Prevents wrapping */
 }
 
-/* Logo specific styling */
-#navbar a:first-child {
+/* Ensure logo & profile image align properly */
+#navbar a:first-child,
+#navbar .nav-right {
     display: flex;
     align-items: center;
+}
+
+/* Right-side icon */
+.nav-right {
+    margin-left: auto; /* Pushes it to the right */
+}
+
+.body {
+    align-items: centers;
 }
