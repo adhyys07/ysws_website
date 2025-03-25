@@ -1,22 +1,33 @@
- /* Style the navbar */
- #navbar {
+/* Style the navbar */
+#navbar {
     position: sticky;
     top: 0;
-    overflow: hidden;
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Logo on left, rest in center */
     background-color: #333;
-  }
-  
-  /* Navbar links */
-  #navbar a {
-    float: left;
-    display: block;
+    padding: 10px 20px;
+}
+
+/* Wrapper to center the nav links */
+.nav_links {
+    flex-grow: 1; /* Takes up available space */
+    display: flex;
+    justify-content: center; /* Centers the links */
+    gap: 20px; /* Adjust spacing between links */
+}
+
+/* Navbar links */
+#navbar a {
     color: #f2f2f2;
-    text-align: center;
-    padding: 14px;
     text-decoration: none;
-  }
-  
-  /* Page content */
-  .content {
-    padding: 16px;
-  } 
+    font-size: 18px;
+    padding: 10px;
+    white-space: nowrap; /* Prevents wrapping */
+}
+
+/* Logo specific styling */
+#navbar a:first-child {
+    display: flex;
+    align-items: center;
+}
