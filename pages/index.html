@@ -1,33 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/styles/style.css">
-    <script src="/scripts/script.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minus Twelve - Glassmorphism</title>
+  <style>
+    /* Global Styles */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top left, #0d0f1a, #141627);
+      color: #fff;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Floating Elements */
+    .floating-circle {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: linear-gradient(135deg, #ff7eb3, #ff758c);
+      border-radius: 50%;
+      filter: blur(50px);
+      opacity: 0.6;
+      z-index: -1;
+      animation: float 6s infinite alternate ease-in-out;
+    }
+
+    .circle-1 { top: 10%; left: 10%; }
+    .circle-2 { bottom: 10%; right: 10%; }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+
+    /* Smooth Scroll Animation */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Sticky Navigation Bar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar a {
+      color: #fff;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Glassmorphism Card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      margin-bottom: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      transition: transform 0.3s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Heading Styling */
+    h1, h2, h3 {
+      background: linear-gradient(90deg, #ff7eb3, #ff758c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      opacity: 0.85;
+      color: #d1d1e9;
+    }
+
+    /* Gradient Button */
+    .btn {
+      background: linear-gradient(90deg, #ff7eb3, #ff758c);
+      padding: 12px 32px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 15px rgba(255, 118, 184, 0.4);
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      background: linear-gradient(90deg, #ff758c, #ff7eb3);
+      transform: scale(1.05);
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* FAQ Section */
+    .faq-item {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    /* Roadmap Section */
+    .roadmap-step {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Join Button */
+    .join-btn {
+      margin-top: 20px;
+      background: linear-gradient(90deg, #7ed6df, #22a6b3);
+      padding: 14px 40px;
+      color: #fff;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 15px rgba(126, 214, 223, 0.4);
+    }
+
+    .join-btn:hover {
+      background: linear-gradient(90deg, #22a6b3, #7ed6df);
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-    <div id="navbar">
-        <a href="#home">
-            <img src="/assets/icon-rounded.svg" alt="hcb" width="24" height="24">
-        </a>      
-        <div class="nav_links">    
-            <a href="#gallery">Gallery</a>
-            <a href="#timer">Timer</a>
-            <a href="#rules">Rules</a>
-        </div> 
-        <a href="https://nanno.bearblog.dev" class="nav-right">
-            <img src="/assets/reshot-icon-internet-DAF7W6ZK34.svg" alt="Profile" width="26" height="26">
-        </a>
-    </div>
-    <h1>Where is the bloody sprite</h1>  
-    <p>
-        Lorem ipsum dolor sit amet. Id numquam placeat ea maxime deleniti cum dolorum dolorum hic omnis nesciunt est aperiam facere. Eum sapiente accusamus et voluptatum quidem qui cupiditate vitae At magnam dignissimos qui officiis quae At quia quidem eum suscipit provident. Qui distinctio quidem 33 dolorum dolores ea nisi placeat et impedit ullam est autem unde non expedita voluptatem. </p><p>In sint debitis ut voluptate repellat hic natus laudantium ut voluptas quibusdam ea mollitia voluptas et dolorem dolor et dolor omnis. Sed quibusdam maxime non fuga officia non quia dolorem et voluptatibus vero sed omnis rerum. Et velit esse eos voluptas pariatur quo illo necessitatibus. </p><p>Sit esse vero qui veniam eius aut nesciunt reprehenderit et sint nihil est vitae suscipit ut ipsa officia aut laboriosam placeat? Quo magni quia ut unde amet est doloremque alias! </p><p>Eos deleniti maxime id voluptatibus rerum ea libero blanditiis et eius amet ex nemo assumenda et maxime unde. Et reiciendis nemo non harum aliquid ut ducimus totam. Est iste laborum et natus consequuntur aut eligendi earum est debitis blanditiis. </p><p>Hic recusandae necessitatibus et facilis tenetur non error enim ut velit molestiae. Qui exercitationem eaque cum dolor cumque ab ipsa alias sed nobis accusamus sed ducimus galisum id praesentium sint eum consequuntur enim. In reprehenderit eveniet qui ipsa fuga et autem nesciunt. </p><p>Qui voluptatum similique et aspernatur autem est incidunt quia est nemo voluptatem. Ut corporis possimus a consequatur modi et dolorum voluptatem eum molestias neque quo amet laborum! Aut dolorem reprehenderit et nulla fugiat At cumque sint et quae dicta est deleniti voluptatem a quaerat galisum eum voluptas soluta. </p><p>Ab quisquam illum et eaque aliquam non nisi error est officia officiis ut culpa maxime quo voluptatem veniam aut internos asperiores. Ut illum galisum eum quidem ipsa aut soluta quis. Qui magnam animi in culpa quidem est eligendi fugiat qui veritatis error est soluta tempora qui fugiat voluptatibus cum quia enim. </p><p>Qui dignissimos dolorum quo minima ullam et error perspiciatis et nobis provident sit nihil quia. In sequi illo ad fugiat omnis cum molestias voluptas et laboriosam sint non corporis autem ut quas voluptates id consequatur natus! </p><p>33 accusamus atque non sequi explicabo qui perferendis necessitatibus et quae libero. Aut maxime minima eum sequi velit qui doloribus unde ab modi omnis et impedit excepturi ut suscipit nihil 33 mollitia sint. Ut voluptatum sunt ex reprehenderit excepturi hic numquam harum ut facilis perferendis et dolores repellat nam reprehenderit quibusdam id cumque sunt. </p><p>Aut quos libero in omnis nostrum sed quia obcaecati eum asperiores beatae aut nemo magni qui esse quam in cupiditate nesciunt. Sit doloremque exercitationem ut autem nulla aut quisquam officiis sed amet sunt. Sed rerum perspiciatis et necessitatibus mollitia aut obcaecati totam est eius ratione! Nam corrupti voluptatem et consequuntur optio ut natus enim in tempore tenetur! </p><p>Et distinctio molestiae rem laudantium voluptatum ea quia incidunt ea autem voluptatum est officia voluptas. Qui praesentium temporibus aut cumque quae sed omnis alias. Id repellendus quisquam in deleniti enim eum aperiam aliquid. </p><p>Aut omnis ducimus eos quasi fugit eos reiciendis vero hic alias illo ut voluptas laborum. Est omnis minus eum nihil dignissimos eum modi explicabo ut animi aperiam nam enim illum et repellat perferendis non quae debitis? </p><p>Et quia possimus quo voluptate impedit ad voluptatem dignissimos qui obcaecati voluptas est harum omnis quo tempora rerum. Ad laboriosam quam ad iusto veritatis et culpa dolor. Et tenetur blanditiis cum quas dolore aut nihil quod. Sed animi dolor sit illum eligendi est quia doloribus id illum obcaecati et galisum possimus! </p><p>Et repudiandae laudantium eos magni quibusdam qui molestias vitae At ipsum omnis ut nisi sint eum porro perferendis! Sit sint odio qui dicta corrupti et laboriosam dolorum ea debitis voluptas. In explicabo cumque et nobis aliquid est galisum impedit nam aliquid quasi et exercitationem rerum aut provident dolorem et nisi magnam? Ut provident quis ut amet adipisci aut expedita ullam.
-    </p>
-    <section id = "home" class="card">
-        Hello my nigga
-    </section>
- 
+
+<!-- Floating Elements -->
+<div class="floating-circle circle-1"></div>
+<div class="floating-circle circle-2"></div>
+
+<!-- Navbar -->
+<div class="navbar">
+  <a href="#intro">Intro</a>
+  <a href="#what-is-this">What is This?</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="#faq">FAQ</a>
+</div>
+
+<!-- Intro Section -->
+<div id="intro" class="section">
+  <div class="glass-card">
+    <h1>Minus Twelve</h1>
+    <p>Create something awesome and get rewarded with a microcontroller!</p>
+    <button class="btn">Learn More</button>
+  </div>
+</div>
+
+<!-- What is This Section -->
+<div id="what-is-this" class="section">
+  <div class="glass-card">
+    <h2>What is This?</h2>
+    <p>Minus Twelve is a coding challenge where you create a tool to solve a problem.</p>
+  </div>
+</div>
+
+<!-- Roadmap Section -->
+<div id="roadmap" class="section">
+  <h2>Roadmap</h2>
+  <div class="roadmap-step">
+    <h3>Step 1: Ideation</h3>
+    <p>Come up with an idea for a tool that solves a real-world problem.</p>
+  </div>
+</div>
+
+<!-- FAQ Section -->
+<div id="faq" class="section">
+  <h2>FAQ</h2>
+  <div class="faq-item">
+    <h3>What is Minus Twelve?</h3>
+    <p>Minus Twelve is a coding challenge where you create a tool and win rewards!</p>
+  </div>
+</div>
+
+<!-- Join Button -->
+<div class="section">
+  <button class="join-btn">Join the Community</button>
+</div>
+
 </body>
 </html>
