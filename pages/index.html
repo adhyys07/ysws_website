@@ -39,11 +39,6 @@
       to { transform: translateY(-20px); }
     }
 
-    /* Smooth Scroll Animation */
-    html {
-      scroll-behavior: smooth;
-    }
-
     /* Sticky Navigation Bar */
     .navbar {
       position: fixed;
@@ -135,19 +130,43 @@
       margin: 0 auto;
     }
 
-    /* FAQ Section */
+    /* FAQ Section with Dropdown + Arrow */
     .faq-item {
-      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
       text-align: left;
     }
 
-    /* Roadmap Section */
-    .roadmap-step {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 20px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    .faq-item summary {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      list-style: none;
+      outline: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::after {
+      content: '▼';
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .faq-item p {
+      padding: 10px 0;
+      color: #d1d1e9;
+      margin: 0;
     }
 
     /* Join Button */
@@ -169,6 +188,7 @@
       transform: scale(1.05);
     }
   </style>
+
 </head>
 <body>
 
@@ -185,9 +205,10 @@
 </div>
 
 <!-- Intro Section -->
+<br><br>
 <div id="intro" class="section">
   <div class="glass-card">
-    <h1>Minus Twelve</h1>
+    <h1>Untitled YSWS Project</h1>
     <p>Create something awesome and get rewarded with a microcontroller!</p>
     <button class="btn">Learn More</button>
   </div>
@@ -201,22 +222,54 @@
   </div>
 </div>
 
+<div id="req" class="section">
+    <div class="glass-card">
+      <h2>Criteria/Requiremets:</h2>
+      <p>Create something awesome and get rewarded with a microcontroller!</p>
+      <button class="btn">Learn More</button>
+    </div>
+  </div>
+
 <!-- Roadmap Section -->
 <div id="roadmap" class="section">
-  <h2>Roadmap</h2>
-  <div class="roadmap-step">
-    <h3>Step 1: Ideation</h3>
-    <p>Come up with an idea for a tool that solves a real-world problem.</p>
+  <div class="glass-card">
+    <h2>Roadmap</h2>
+    <p>1. Start the challenge<br>2. Build your tool<br>3. Submit your work<br>4. Get rewarded</p>
   </div>
 </div>
 
 <!-- FAQ Section -->
 <div id="faq" class="section">
   <h2>FAQ</h2>
-  <div class="faq-item">
-    <h3>What is Minus Twelve?</h3>
-    <p>Minus Twelve is a coding challenge where you create a tool and win rewards!</p>
-  </div>
+  <details class="faq-item">
+    <summary>How do I Join?</summary>
+    <p>Click the button below to join the community and get started!</p>
+  </details>
+  <details class="faq-item">
+    <summary>Who is eligible ?</summary>
+    <p>Click the button below to join the community and get started!</p>
+  </details>
+  <details class="faq-item">
+    <summary>How do I Log My time ?</summary>
+    <p>Click the button below to join the community and get started!</p>
+  </details>
+ 
+  <details class="faq-item">
+    <summary>What Projects Are Allowed ?</summary>
+    <p>Click the button below to join the community and get started!</p>
+  </details>
+  <details class="faq-item">
+    <summary>Do I Need Any Experience ?</summary>
+    <p>Click the button below to join the community and get started!</p>
+  </details>
+  <details class="faq-item">
+    <summary>Need Help ?</summary>
+    <p>Click the button below to join the community and get started!</p>
+  </details>   
+  <details class="faq-item">
+    <summary>Something Else ?</summary>
+    <p>Click the button below to join the community and get started!</p>
+  </details>
 </div>
 
 <!-- Join Button -->
