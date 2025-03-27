@@ -1,43 +1,128 @@
-/* Style the navbar */
-#navbar {
-    position: sticky;
-    top: 0;
-    display: flex; /* Enables flexbox */
-    align-items: center; /* Centers items vertically */
-    justify-content: space-between; /* Logo on left, rest in center */
-    background-color: #333;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin: 0 0 10px;
+}
+
+/* Glassmorphism Effect */
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Style */
+.btn {
+    background: #ff7675;
+    border: none;
     padding: 10px 20px;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
 }
 
-/* Wrapper to center the nav links */
-.nav_links {
-    flex-grow: 1; /* Takes up available space */
+.btn:hover {
+    background: #ff5c5c;
+}
+
+/* Roadmap */
+.timeline {
     display: flex;
-    justify-content: center; /* Centers the links */
-    gap: 20px; /* Adjust spacing between links */
+    flex-direction: column;
+    gap: 30px;
 }
 
-/* Navbar links */
-#navbar a {
-    color: #f2f2f2;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    white-space: nowrap; /* Prevents wrapping */
-}
-
-/* Ensure logo & profile image align properly */
-#navbar a:first-child,
-#navbar .nav-right {
+.event {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
-/* Right-side icon */
-.nav-right {
-    margin-left: auto; /* Pushes it to the right */
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff7675;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
 }
 
-.body {
-    align-items: centers;
+.dotted-line {
+    width: 2px;
+    height: 30px;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5) 0,
+        rgba(255, 255, 255, 0.5) 5px,
+        transparent 5px,
+        transparent 10px
+    );
+    align-self: center;
+}
+
+.date {
+    font-weight: bold;
+    color: #ff7675;
+}
+
+/* FAQ Section */
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Join Community Button */
+.join-community {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.join-community .btn {
+    font-size: 18px;
+    padding: 12px 30px;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .event {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
 }
