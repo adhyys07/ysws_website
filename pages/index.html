@@ -189,6 +189,7 @@
     }
   </style>
 
+
 </head>
 <body>
 
@@ -198,10 +199,10 @@
 
 <!-- Navbar -->
 <div class="navbar">
-  <a href="#intro">Intro</a>
-  <a href="#what-is-this">What is This?</a>
-  <a href="#roadmap">Roadmap</a>
-  <a href="#faq">FAQ</a>
+  <a href="#intro" class="nav-link">Intro</a>
+  <a href="#what-is-this" class="nav-link">What is This?</a>
+  <a href="#roadmap" class="nav-link">Roadmap</a>
+  <a href="#faq" class="nav-link">FAQ</a>
 </div>
 
 <!-- Intro Section -->
@@ -210,7 +211,6 @@
   <div class="glass-card">
     <h1>Untitled YSWS Project</h1>
     <p>Create something awesome and get rewarded with a microcontroller!</p>
-    <button class="btn">Learn More</button>
   </div>
 </div>
 
@@ -278,4 +278,21 @@
 </div>
 
 </body>
+<script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+  
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 60, // Adjust for navbar height
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
 </html>
