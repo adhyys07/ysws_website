@@ -128,8 +128,7 @@ html {
 }
 
 .rotated-image {
-        transform: rotate(90deg); /* Rotates the image by 90 degrees */
-        display: grid; /* Ensures the image is treated as a block element */
-        margin-left: 0; /* Aligns the image to the left */
+    transform: rotate(90deg);
+    float: left; /* Aligns image to the left */
+    margin-right: 10px; /* Adds some spacing */
 }
-    
