@@ -126,3 +126,10 @@ html {
         font-size: 16px;
     }
 }
+
+.rotated-image {
+        transform: rotate(90deg); /* Rotates the image by 90 degrees */
+        display: grid; /* Ensures the image is treated as a block element */
+        margin-left: 0; /* Aligns the image to the left */
+}
+    
