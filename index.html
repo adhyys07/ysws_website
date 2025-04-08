@@ -23,7 +23,7 @@
         position: absolute;
         width: 150px;
         height: 150px;
-        background: linear-gradient(135deg, #8A2BE2, #7900eb);
+        background: linear-gradient(135deg, #1969ff, #21a6ff);
         border-radius: 50%;
         filter: blur(50px);
         opacity: 0.6;
@@ -81,7 +81,7 @@
         padding: 8px 24px;
         font-size: 1rem;
         border-radius: 20px;
-        background: linear-gradient(90deg, #E040FB, #C77DFF);
+        background: linear-gradient(90deg, #115cff, #1d99ff);
         color: #fff;
         border: none;
         cursor: pointer;
@@ -119,7 +119,7 @@
 
     /* Heading Styling */
     h1, h2, h3 {
-        background: linear-gradient(90deg, #8A2BE2, #ff758c);
+        background: linear-gradient(90deg, #0d45ff, #75fff8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -177,13 +177,13 @@
     }
 
     .timeline-container::-webkit-scrollbar-thumb {
-        background-color: #8A2BE2;
+        background-color: #2bb7e2;
         border-radius: 10px;
     }
 
     /* Button Styling */
     .btn {
-        background: linear-gradient(90deg, #ff7eb3, #8A2BE2);
+        background: linear-gradient(90deg, #1553fd, #4493fc);
         padding: 12px 32px;
         color: #fff;
         font-size: 1rem;
@@ -233,7 +233,7 @@
         }
         .join-btn {
         margin-top: 20px;
-        background: linear-gradient(90deg,  #E040FB, #C77DFF);
+        background: linear-gradient(90deg,  #1c2bff, #288bfc);
         padding: 14px 40px;
         color: #fff;
         font-size: 1.2rem;
@@ -252,7 +252,61 @@
         background: linear-gradient(90deg, #C77DFF,#E040FB);
         transform: scale(1.05);
         }
+
+/* Edge Images */
+.edge-image {
+    position: fixed;
+    z-index: -1; /* Keep behind content */
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.edge-image:hover {
+    transform: scale(1.05);
+}
+
+/* Left side images */
+.edge-image.left {
+    left: 20px;
+}
+
+/* Right side images */
+.edge-image.right {
+    right: 20px;
+}
+    
+
+
+.edge-image {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+}
+
+.special{
+    top: 100px;
+}
+
 </style>
+
+<script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+    window.scrollTo({
+        top: targetElement.offsetTop - 60, // Adjust for navbar height
+        behavior: 'smooth'
+    });
+    }
+});
+});
+</script>
+
+
 </head>
 <body >
     <!-- Floating Elements -->
@@ -269,7 +323,7 @@
         </div>
         <button class="navbar-btn">GO TO BLENDER</button>
     </div>
-
+    <img src="assets/characters/1000069614.png" align="left" class="special" height="64">
     <!-- Intro Section -->
     <br><br>
     <div id="intro" class="section">
@@ -281,6 +335,7 @@
     </div>
     </div>
 
+    <img src="assets/characters/Timeline 1_0009.png" align="right">
     <!-- What is This Section -->
     <div id="what-is-this" class="section">
     <div class="glass-card">
@@ -305,6 +360,7 @@
         </div>
     </div>
 
+    <img src="assets/characters/Shopkeeper.png" align="left">
 
 <div class="navbar">
     <div class="nav-links">
@@ -315,6 +371,7 @@
     </div>
     <button class="navbar-btn">GO TO BLENDER</button>
 </div>
+
 
 <!-- Roadmap Section -->
 <div id="roadmap" class="section">
@@ -343,21 +400,22 @@
         <img src="assets/image(2).png" class="rotated-image">
         <div class="timeline-item">
             <h3>STAGE 5</h3>
-            <p>Rewards</p>
+            <p>Get Reviewed</p>
         </div>
         <img src="assets/image_1_-removebg-preview.png" class="rotated-image">
         <div class="timeline-item">
             <h3>STAGE 6</h3>
-            <p>Rewards</p>
+            <p>Work some more</p>
         </div>
         <img src="assets/image(2).png" class="rotated-image">
         <div class="timeline-item">
             <h3>STAGE 7</h3>
-            <p>Rewards</p>
+            <p>Have Fun!!!</p>
         </div>
     </div>
 </div>
 </div>
+<img src="assets/characters/Sprite-0001.png" align="right" width="350">
 <div id="faq" class="section">
     <h2>FAQ</h2>
     <details class="faq-item">
@@ -407,22 +465,8 @@
     </div>
 
     </body>
-    <script>
-        document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
 
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+<img src="assets/characters/zorrito.png" align="left" height="200">
 
-        if (targetElement) {
-        window.scrollTo({
-            top: targetElement.offsetTop - 60, // Adjust for navbar height
-            behavior: 'smooth'
-        });
-        }
-    });
-    });
-    </script>
 </body>
 </html>
