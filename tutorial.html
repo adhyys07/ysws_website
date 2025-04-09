@@ -1,11 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Minus Twelve - Glassmorphism</title>
+<style>
+    /* Global Styles */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at top left, #0d0f1a, #141627);
+        color: #fff;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+
+    /* Floating Elements */
+    .floating-circle {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(135deg, #1969ff, #21a6ff);
+        border-radius: 50%;
+        filter: blur(50px);
+        opacity: 0.6;
+        z-index: -1;
+        animation: float 6s infinite alternate ease-in-out;
+    }
+
+    .circle-1 { top: 10%; left: 10%; }
+    .circle-2 { bottom: 10%; right: 10%; }
+
+    @keyframes float {
+        from { transform: translateY(0); }
+        to { transform: translateY(-20px); }
+    }
+
+    /* Sticky Navigation Bar */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 10px 20px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar a {
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 10px;
+        border-radius: 20px;
+        transition: background 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+        margin-left: 530px;
+    }
+
+    /* Button Styling */
+    .navbar-btn {
+        margin-left: auto;
+        margin-right: 40px;
+        padding: 8px 24px;
+        font-size: 1rem;
+        border-radius: 20px;
+        background: linear-gradient(90deg, #115cff, #1d99ff);
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 15px rgba(255, 118, 184, 0.4);
+    }
+
+    /* Section Styling */
+    .section {
+        padding: 60px 20px;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Glassmorphism Card */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        padding: 50px;
+        margin-bottom: 40px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transition: transform 0.3s ease;
+        width: 100%; /* Expands the card to take full width of the parent container */
+        max-width: 2000px; /* Allows the card to expand more while keeping a limit */
+
+
+    }
+
+    .glass-card:hover {
+        transform: translateY(-14px);
+    }
+
+    /* Heading Styling */
+    h1, h2, h3 {
+        background: linear-gradient(90deg, #0d45ff, #75fff8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; }
+
+    /* TIMELINE */
+    .timeline-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+    overflow-x: visible; /* Allow items to be visible */
+    flex-wrap: wrap; /* Allow wrapping to prevent cutting off */
+}
+
+.timeline-item {
+    background: rgba(255, 255, 255, 0.07);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 500px; /* Increase width */
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 200px;
+    list-style: none;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+    .timeline-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+
+    .timeline-item:last-child::before {
+        display: none;
+
+    }
+
+    /* Scrollbar Styling */
+    .timeline-container::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .timeline-container::-webkit-scrollbar-thumb {
+        background-color: #2bb7e2;
+        border-radius: 10px;
+    }
+
+    /* Button Styling */
+    .btn {
+        background: linear-gradient(90deg, #1553fd, #4493fc);
+        padding: 12px 32px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        margin-top: 15px;
+    }
+    .faq-item {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s ease;
+        text-align: left;
+        }
+
+        .faq-item summary {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        list-style: none;
+        outline: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        .faq-item summary::after {
+        content: '▼';
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+        }
+
+        .faq-item[open] summary::after {
+        transform: rotate(180deg);
+        }
+        
+        .faq-item p {
+        padding: 10px 0;
+        color: #d1d1e9;
+        margin: 0;
+        }
+        .join-btn {
+        margin-top: 20px;
+        background: linear-gradient(90deg,  #1c2bff, #288bfc);
+        padding: 14px 40px;
+        color: #fff;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 4px 15px rgba(126, 214, 223, 0.4);
+        }
+        
+        .join-btn:hover {
+        background: linear-gradient(90deg, #C77DFF,#E040FB);
+        transform: scale(1.05);
+        }
+        .navbar-btn:hover {
+        background: linear-gradient(90deg, #C77DFF,#E040FB);
+        transform: scale(1.05);
+        }
+
+/* Edge Images */
+.edge-image {
+    position: fixed;
+    z-index: -1; /* Keep behind content */
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.edge-image:hover {
+    transform: scale(1.05);
+}
+
+/* Left side images */
+.edge-image.left {
+    left: 20px;
+}
+
+/* Right side images */
+.edge-image.right {
+    right: 20px;
+}
     
-</body>
-</html>
+
+
+.edge-image {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+}
+
+.special{
+    top: 100px;
+}
+
+</style>
+
+<script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+    window.scrollTo({
+        top: targetElement.offsetTop - 60, // Adjust for navbar height
+        behavior: 'smooth'
+    });
+    }
+});
+});
+</script>
+
+
+</head>
+<body >
+    <!-- Floating Elements -->
+    <div class="floating-circle circle-1"></div>
+    <div class="floating-circle circle-2"></div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+    <div class="nav-links">
+    <a href="index.html" class="nav-link">Intro</a>
+    <a href="index.html" class="nav-link">What is This?</a>
+    <a href="#index.html" class="nav-link">Roadmap</a>
+    <a href="index.html" class="nav-link">FAQ</a>
+
+   
+
