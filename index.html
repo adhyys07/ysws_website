@@ -289,11 +289,19 @@
     height: auto;
 }
 
-.special{
-    top: 100px;
-    position: relative;
-    
-}
+	.special {
+		margin-right: 50px;
+		transform: scaleX(-1);
+		height: 120px;
+		margin-top: 110px;
+		transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+	}
+
+	.special:hover {
+		transform: scaleX(-1) scale(1.2) rotate(-2deg);
+		box-shadow: 0 25px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 0, 150, 0.6);
+		filter: brightness(1.2) contrast(1.1);
+	}
 .character a:hover{
         transform: scale(1.5);
     }
@@ -306,6 +314,27 @@
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 1.3rem;
 }
+
+
+	.global {
+		transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+	}
+
+	.global:hover {
+		transform: scale(1.2) rotate(-2deg); /* opposite direction */
+		box-shadow: 0 25px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 140, 0, 0.6); /* spicy orange glow */
+		filter: brightness(1.2) contrast(1.1);
+	}
+
+	.global2 {
+		transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+	}
+
+	.global2:hover {
+		transform: scale(1.2) rotate(2deg); /* opposite direction */
+		box-shadow: 0 25px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 140, 0, 0.6); /* spicy orange glow */
+		filter: brightness(1.2) contrast(1.1);
+	}
 
 </style>
 
@@ -328,8 +357,8 @@
         </div>
         <button class="navbar-btn">GO TO BLENDER</button>
     </div>
-    <a target="_blank" href="https://hackclub.slack.com/team/U08BZGJBAAY"><img src="assets/characters/1000069614.png" align="left" class="special" style="height: 120px; margin-top: 100px;left: 75px;"></a>
-    <a target="_blank" href="https://hackclub.slack.com/team/U08BZGJBAAY"><img src="assets/characters/1000069614.png" align="right" class="special" style="margin-right: 50px; transform: scaleX(-1); height: 120px; margin-top: 110px;"></a>
+    <a target="_blank" href="https://hackclub.slack.com/team/U08BZGJBAAY"><img src="assets/characters/1000069614.png" align="left" class="special" style="height: 120px; margin-top: 150px;left: 20000px;"></a>
+    <a target="_blank" href="https://hackclub.slack.com/team/U08BZGJBAAY"><img src="assets/characters/1000069614.png" align="right" class="special" style="height: 120px; margin-top: 150px;right: 0px;"></a>
     <!-- Intro Section -->
     <br><br>
     <div id="intro" class="section">
@@ -341,7 +370,7 @@
     </div>
     </div>
 
-    <a href="https://hackclub.slack.com/team/U07DJMFAQQP"><img height="300px" width="300px" style="position: relative; left: 60px; margin-top: 90px;" src="assets/characters/Timeline 1_0009.png" align="right"></a>
+    <a href="https://hackclub.slack.com/team/U07DJMFAQQP"><img class="global" height="300px" width="300px" style="position: relative; left: 60px; margin-top: 90px;" src="assets/characters/Timeline 1_0009.png" align="right"></a>
     <!-- What is This Section -->
     <div id="what-is-this" class="section">
     <div class="glass-card">
@@ -350,7 +379,7 @@
         <p class="handwriting">Blender, relating to the artistic tool, in this competetion you can show off your OCs and their beautiful designs through a playable tech demo for everyone to play!!! (You will also recieve something to fuel yhe artist in you. Ssshhhhh) </p>
     </div>
     </div>
-    <a href="https://hackclub.slack.com/team/U0798DBP8VA"><img style="height: 200px; width: 220px; margin-top: 250px; margin-left: 50px;" src="assets/characters/Shopkeeper.png" align="left"></a>
+    <a href="https://hackclub.slack.com/team/U0798DBP8VA"><img class="global2" style="height: 180px; width: auto; margin-top: 250px; margin-left: 0px;" src="assets/characters/Shopkeeper.png" align="left"></a>
     <div id="req" class="section">
         <div class="glass-card">
         <h2>REQUIREMENTS</h2>
@@ -369,7 +398,7 @@
     </div>
 
 <div class="navbar">
-    <a href="https://hackclub.com/"><img style="position: absolute; top: -7px; left: 0px; border: 0; width: 200px; height: 120px; z-index: 999;" src="https://assets.hackclub.com/banners/2025.svg" alt="Hack Club"/></a>
+    <a href="https://hackclub.com/"><img style="position: relative; top: -1px; left: 0px; border: 0; width: auto; height: 70px; z-index: 999;" src="https://assets.hackclub.com/banners/2025.svg" alt="Hack Club"/></a>
     <div class="nav-links">
         <a style="font-family: 'Gochi Hand', cursive; font-size: 24px;" href="#intro" class="nav-link">Intro</a>
         <a style="font-family: 'Gochi Hand', cursive; font-size: 24px;" href="#what-is-this" class="nav-link">What is This?</a>
@@ -383,8 +412,8 @@
 </div>
 
 
-<a target="_blank" href="https://hackclub.slack.com/team/U08AS03UXAN"><img src="assets\characters\Idle.png" align="left" style="position: relative;height: 250px; width: 250px; margin-top: 250px; right: 10px;"></a>
-<a target="_blank" href="https://hackclub.slack.com/team/U08AS03UXAN"><img src="assets/characters/SpriteSheetOrc.png" align="right" style="position: relative;height: 250px; width: 250px; margin-top: 1300px; left: 300px; "></a>
+<a target="_blank" href="https://hackclub.slack.com/team/U08AS03UXAN"><img class="global2" src="assets\characters\Idle.png" align="right" style="position: relative;height: 250px; width: 250px; margin-top: 250px; right: 10px;"></a>
+<a target="_blank" href="https://hackclub.slack.com/team/U08AS03UXAN"><img class="global" src="assets/characters/SpriteSheetOrc.png" align="left" style="position: relative;height: 200px; width: auto; margin-top: 1300px; left: 50px; "></a>
 <!-- Roadmap Section -->
 <div id="roadmap" class="section">
     
@@ -430,7 +459,7 @@
     </div>
 </div>
 </div>
-<a href="https://hackclub.slack.com/team/U0798DBP8VA"><img src="assets/characters/Sprite-0001.png" align="right" width="250px" style="margin-top: 300px;"></a>
+<a href="https://hackclub.slack.com/team/U0798DBP8VA"><img class="global2" src="assets/characters/Sprite-0001.png" align="right" width="250px" style="margin-top: 300px;"></a>
 
 <div id="faq" class="section">
     <h2>FREQUENTLY ASKED QUESTIONS (FAQ)</h2>
@@ -470,8 +499,8 @@
     </details>
     </div>
     <!-- Join Button -->
-    <a  target="_blank" href="https://hackclub.slack.com/team/U082TBXNVTJ"><img src="assets/characters/zorrito.png" align="left" height="350px" style="margin-top: 110px; transition: transform 0.3s ease; :hover{transform: scale(1.1);}"></a>
-    <a target="_blank" href="https://hackclub.slack.com/team/U082TBXNVTJ"><img src="assets/characters/zorrito.png" align="right" height="350px" style="margin-top: 110px; transform: scaleX(-1);"></a>
+    <a  target="_blank" href="https://hackclub.slack.com/team/U082TBXNVTJ"><img class="global2" src="assets/characters/zorrito.png" align="left" height="200px" style="margin-top: 110px"></a>
+    <a target="_blank" href="https://hackclub.slack.com/team/U082TBXNVTJ"><img class="global" src="assets/characters/zorrito.png" align="right" height="200px" style="margin-top: 110px"></a>
     <div class="section">
         <h2 align="center" style="margin-top: -10px;">JOIN THE COMMUNITY</h2>
     <a href="https://hackclub.slack.com/"><button class="join-btn" style="font-family: 'Gloria Hallelujah', cursive;">Join SLACK</button></a>
