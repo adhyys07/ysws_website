@@ -4,9 +4,13 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Blend It !</title>
+<link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+
 <style>
     /* Global Styles */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
     body {
         font-family: 'Poppins', sans-serif;
@@ -119,13 +123,15 @@
 
     /* Heading Styling */
     h1, h2, h3 {
+        font-family: 'Gochi Hand', cursive;
         background: linear-gradient(90deg, #0d45ff, #75fff8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     h1 { font-size: 3rem; }
-    h2 { font-size: 2rem; }
+    h2 { font-size: 3rem; }
+    h3 { font-size: 2rem; }
 
     /* TIMELINE */
     .timeline-container {
@@ -284,16 +290,25 @@
 
 .special{
     top: 100px;
-
-.character{
-    :hover {
+    position: relative;
+    height: 120px;
+    margin-top: 100px;
+    left: 75px;
+}
+.character a:hover{
         transform: scale(1.5);
     }
+.patrick-hand-regular {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 40;
+  font-style: normal;
 }
+.handwriting{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.3rem;
 }
 
 </style>
-
 
 </head>
 
@@ -314,34 +329,34 @@
         </div>
         <button class="navbar-btn">GO TO BLENDER</button>
     </div>
-    <img src="assets/characters/1000069614.png" align="left" class="special" height="64">
+    <img src="assets/characters/1000069614.png" align="left" class="special">
     <!-- Intro Section -->
     <br><br>
     <div id="intro" class="section">
     <div class="glass-card">
         <h1>BLEND</h1>
-        <p>Make your character and show it off with a tech demo!</p>
+        <p class="handwriting">Make your character and show it off with a tech demo!</p>
         <br>
         <button class="btn">SIGN UP</button>
     </div>
     </div>
 
-    <img height="300px" width="300px" style="position: relative; left: 60px;" src="assets/characters/Timeline 1_0009.png" align="right">
+    <img height="300px" width="300px" style="position: relative; left: 60px; margin-top: 90px;" src="assets/characters/Timeline 1_0009.png" align="right">
     <!-- What is This Section -->
     <div id="what-is-this" class="section">
     <div class="glass-card">
-        <h2 >What is This?</h2>
+        <h2 >WHAT IS THIS ?</h2>
         <hr>
-        <p>Blender, relating to the artistic tool, in this competetion you can show off your OCs and their beautiful designs through a playable tech demo for everyone to play!!! (You will also recieve something to fuel yhe artist in you. Ssshhhhh) </p>
+        <p class="handwriting">Blender, relating to the artistic tool, in this competetion you can show off your OCs and their beautiful designs through a playable tech demo for everyone to play!!! (You will also recieve something to fuel yhe artist in you. Ssshhhhh) </p>
     </div>
     </div>
-
+    <img style="height: 200px; width: 220px; margin-top: 250px; margin-left: 50px;" src="assets/characters/Shopkeeper.png" align="left">
     <div id="req" class="section">
         <div class="glass-card">
         <h2>REQUIREMENTS</h2>
         <hr>
         <p>
-            <ul align="left">
+            <ul align="left" class="handwriting">
                 <li>Minimum 25 hours of work for developing character</li>
                 <li>Minimum 7 animations e.g-idle,walk,attack etc.</li>
                 <li>Make 1 demo video explaining your character and your game</li>
@@ -353,14 +368,13 @@
         </div>
     </div>
 
-    <img styo height="200px"src="assets/characters/Shopkeeper.png" align="left">
-
 <div class="navbar">
+    <a href="https://hackclub.com/"><img style="position: absolute; top: -7px; left: 0px; border: 0; width: 200px; height: 120px; z-index: 999;" src="https://assets.hackclub.com/banners/2025.svg" alt="Hack Club"/></a>
     <div class="nav-links">
         <a href="#intro" class="nav-link">Intro</a>
         <a href="#what-is-this" class="nav-link">What is This?</a>
         <a href="#roadmap" class="nav-link">Roadmap</a>
-        <a  href="tutorial.html" class="nav-link">Tutorial</a>
+        <a href="tutorial.html">Tutorial</a>
         <a href="#faq" class="nav-link">FAQ</a>
         
     </div>
@@ -371,81 +385,81 @@
 <!-- Roadmap Section -->
 <div id="roadmap" class="section">
     <div class="glass-card">
-    <h2>Roadmap</h2>
+    <h2>ROADMAP</h2>
     <div class="timeline-container">
         <div class="timeline-item">
-            <h3>STAGE 1</h3>
-            <p>Challenge begins</p>
+            <h3>STAGE I</h3>
+            <p class="handwriting">Challenge begins</p>
         </div>
         <img align="left" src="assets/image_1_-removebg-preview.png" class="rotated-image">
         <div class="timeline-item">
             <h3>STAGE 2</h3>
-            <p>Create character</p>
+            <p class="handwriting">Create character</p>
         </div>
         <img src="assets/image(2).png" class="rotated-image">
         <div class="timeline-item">
             <h3>STAGE 3</h3>
-            <p>Tech demo creation</p>
+            <p class="handwriting">Tech demo creation</p>
         </div>
         <img src="assets/image_1_-removebg-preview.png" class="rotated-image">
         <div class="timeline-item">
             <h3>STAGE 4</h3>
-            <p>Submit progress</p>
+            <p class="handwriting">Submit progress</p>
         </div>
         <img src="assets/image(2).png" class="rotated-image">
         <div class="timeline-item">
             <h3>STAGE 5</h3>
-            <p>Get Reviewed</p>
+            <p class="handwriting" >Get Reviewed</p>
         </div>
         <img src="assets/image_1_-removebg-preview.png" class="rotated-image">
         <div class="timeline-item">
             <h3>STAGE 6</h3>
-            <p>Work some more</p>
+            <p class="handwriting" >Work some more</p>
         </div>
         <img src="assets/image(2).png" class="rotated-image">
         <div class="timeline-item">
             <h3>STAGE 7</h3>
-            <p>Have Fun!!!</p>
+            <p class="handwriting" >Have Fun!!!</p>
         </div>
     </div>
 </div>
 </div>
 <img src="assets/characters/Sprite-0001.png" align="right" width="350">
 <div id="faq" class="section">
-    <h2>Frequently Asked Questions (FAQ)</h2>
+    <h2>FREQUENTLY ASKED QUESTIONS (FAQ)</h2>
     <details class="faq-item">
         <summary>How do I Join?</summary>
-        <p>Click on the SIGNUP button above, fill out the form and join the slack community and start logging your time on Blender</p>
+        <p class="handwriting" style="size: 8px;">Click on the SIGNUP button above, fill out the form and join the slack community and start logging your time on Blender</p>
     </details>
 
     <details class="faq-item">
         <summary>How do I Log My time ?</summary>
-        <p>Click the GO TO BLENDER button and start logging your time. Once you are finished give the description of session and upload the video of your progress</p>
+        <p class="handwriting">Click the GO TO BLENDER button and start logging your time. Once you are finished give the description of session and upload the video of your progress</p>
     </details>
     
     <details class="faq-item">
         <summary>What Projects Are Allowed ?</summary>
-        <p>All 2D or 3D characters with at least 7 animations and the character should be unique</p>
+        <p class="handwriting">All 2D or 3D characters with at least 7 animations and the character should be unique</p>
     </details>
     <details class="faq-item">
         <summary>Can I Do This In Team ?</summary>
-        <p>No, team entries are not allowed you have to do it individually ! </p>
+        <p class="handwriting">No, team entries are not allowed you have to do it individually ! </p>
     </details>
     <details class="faq-item">
         <summary>What Do You Get ?</summary>
-        <p>If you meet all the criterias then hack club will grant you an aesprite and if you log more hours mentioned in requirements then hack club will ship you a graphic tablet</p>
+        <p class="handwriting">If you meet all the criterias then hack club will grant you an aesprite and if you log more hours mentioned in requirements then hack club will ship you a graphic tablet</p>
     </details>
     <details class="faq-item">
         <summary>Do I Need Any Experience ?</summary>
-        <p>No, its a learning experience for all of us, so no prior experience is required </p>
+        <p class="handwriting">No, its a learning experience for all of us, so no prior experience is required </p>
     </details>
     <details class="faq-item">
         <summary>Need Help ?</summary>
-        <p>Click the button below to join the community or mail us at blend@hackclub.com</p>
+        <p class="handwriting">Click the button below to join the community or mail us at blend@hackclub.com</p>
     </details>   
     <details class="faq-item">
         <summary>Something Else ?</summary>
-        <p>Click the button below to join the community and get your doubts cleared !</p>
+        <p class="handwriting">Click the button below to join the community and get your doubts cleared !</p>
     </details>
     </div>
 
@@ -453,8 +467,8 @@
 
     <div class="section">
         <h2 align="center">JOIN THE COMMUNITY</h2>
-    <a href="https://hackclub.slack.com/"><button class="join-btn">Join SLACK</button></a>
-    <p align="center">Already On Slack ? Join  <a style="color: white;" href="https://hackclub.slack.com/archives/C08KVAXUKK3">#blend </a> channel</p>
+    <a href="https://hackclub.slack.com/"><button class="join-btn" style="font-family: 'Gloria Hallelujah', cursive;">Join SLACK</button></a>
+    <p align="center" class="handwriting">Already On Slack ? Join  <a style="color: white;" href="https://hackclub.slack.com/archives/C08KVAXUKK3">#blend </a> channel</p>
     </div>
 
     </body>
