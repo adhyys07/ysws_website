@@ -143,16 +143,28 @@
 			flex-wrap: wrap;
 			list-style: none;
 		}
+		.timeline-stage {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 40px;
+		}
+		.timeline-stage img {
+			width: 100px;
+			margin-top: 20px;
+		}
+
+
 		.timeline-item {
 			background: rgba(255, 255, 255, 0.07);
 			padding: 20px;
 			border-radius: 12px;
 			backdrop-filter: blur(10px);
 			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-			width: 300px;
+			width: 500px;
 			text-align: center;
 			transition: transform 0.3s ease;
-			height: 180px;
+			height: auto;
 		}
 		.timeline-item:hover {
 			transform: translateY(-10px);
@@ -206,11 +218,11 @@
 		
 			filter: brightness(1.2) contrast(1.1);
 		}
-}
+	}
 
 	
 	
-	</style>
+</style>
 
 
 
@@ -253,7 +265,7 @@
     <div class="glass-card">
         <h2 >WHAT IS THIS ?</h2>
         <hr>
-        <p class="handwriting">Blender, relating to the artistic tool, in this competetion you can show off your OCs and their beautiful designs through a playable tech demo for everyone to play!!! (You will also recieve something to fuel yhe artist in you. Ssshhhhh) </p>
+        <p class="handwriting">Blender, relating to the artistic tool, in this competition you can show off your OCs and their beautiful designs through a playable tech demo for everyone to play!!! (You will also recieve something to fuel the artist in you. Ssshhhhh) </p>
     </div>
     </div>
     <a target="_blank" href="https://hackclub.slack.com/team/U0798DBP8VA"><img class="global2" style="height: 180px; width: auto; margin-top: 250px; margin-left: 0px;" src="assets/characters/Shopkeeper.png" align="left"></a>
@@ -298,48 +310,69 @@
     <h2>ROADMAP</h2>
     <div class="timeline-container">
         <img src="" alt="">
-        <div class="timeline-item">
-            <h3>STAGE I</h3>
-			<h4>April 20</h4>
-            <p class="handwriting">You have to sign up yourself filling out the form and setting up the dev environment</p>
-        </div>
-        <img align="left" src="assets/image_1_-removebg-preview.png" class="rotated-image">
-        <div class="timeline-item">
-            <h3>STAGE 2</h3>
-			<h4>April 25</h4>
-            <p class="handwriting">Start Blending And Create Your Unique Character With Animations. Don't forget to log your time 
-			</p>
-        </div>
-        <img src="assets/image(2).png" class="rotated-image">
-        <div class="timeline-item">
-            <h3>STAGE 3</h3>
-			<h4>May 7</h4>
-            <p class="handwriting">Complete Your hours and get reviewed !</p>
-        </div>
-        <img src="assets/image_1_-removebg-preview.png" class="rotated-image">
-        <div class="timeline-item">
-            <h3>STAGE 4</h3>
-			<h4>May 9</h4>
-            <p class="handwriting">Once reviewed successfully, you can start building your game to get further rewards</p>
-        </div>
-        <img src="assets/image(2).png" class="rotated-image">
-        <div class="timeline-item">
-            <h3>STAGE 5</h3>
-			<h4>May 25</h4>
-            <p class="handwriting" >Complete Your Game and get your hours reviewed</p>
-        </div>
-        <img src="assets/image_1_-removebg-preview.png" class="rotated-image">
-        <div class="timeline-item">
-            <h3>STAGE 6</h3>
-			<h4>May 28</h4>
-            <p class="handwriting" >After reviewing and we will process your rewards and send them to you via mail</p>
-        </div>
-        <img src="assets/image(2).png" class="rotated-image">
-        <div class="timeline-item">
-            <h3>STAGE 7</h3>
-			<h4>June 5</h4>
-            <p class="handwriting" >Enjoy your rewards and have Fun!!!</p>
-        </div>
+		
+		<div class="timeline-stage">
+			<div class="timeline-item">
+				<h3>STAGE I</h3>
+				<h4>April 20</h4>
+				<p class="handwriting">You have to sign up yourself filling out the form and setting up the dev environment</p>
+			</div>	
+			<img src="assets/image(2).png" alt="imagine a arrow pointing downwards">
+		</div>
+		
+		<div class="timeline-stage">
+			<div class="timeline-item">
+				<h3>STAGE 2</h3>
+				<h4>April 25</h4>
+				<p class="handwriting">Start Blending And Create Your Unique Character With Animations. Don't forget to log your time! 
+				</p>
+			</div>
+			<img src="assets/image(3).png" alt="imagine a arrow pointing downwards">
+		</div>
+		
+		<div class="timeline-stage">
+			<div class="timeline-item">
+				<h3>STAGE 3</h3>
+				<h4>May 7</h4>
+				<p class="handwriting">Complete Your hours and get reviewed !</p>
+			</div>
+			<img src="assets/image(2).png" alt="imagine a arrow pointing downwards">
+		</div>
+		
+		<div class="timeline-stage"></div>
+			<div class="timeline-item">
+				<h3>STAGE 4</h3>
+				<h4>May 9</h4>
+				<p class="handwriting">Once reviewed successfully, you can start building your game to get further rewards</p>
+			</div>
+			<img src="assets/image(3).png" alt="imagine a arrow pointing downwards">
+		</div>
+		
+		<div class="timeline-stage">
+			<div class="timeline-item">
+				<h3>STAGE 5</h3>
+				<h4>May 25</h4>
+				<p class="handwriting" >Complete Your Game and get your hours reviewed</p>
+			</div>
+			<img src="assets/image(2).png" alt="imagine a arrow pointing downwards">
+		</div>
+
+		<div class="timeline-stage">
+			<div class="timeline-item">
+				<h3>STAGE 6</h3>
+				<h4>May 28</h4>
+				<p class="handwriting" >After reviewing and we will process your rewards and send them to you via mail</p>
+			</div>
+			<img src="assets/image(3).png" alt="imagine a arrow pointing downwards">
+		</div>
+
+		<div class="timeline-stage">
+			<div class="timeline-item">
+				<h3>STAGE 7</h3>
+				<h4>June 5</h4>
+				<p class="handwriting" >Enjoy your rewards and have Fun!!!</p>
+			</div>
+		</div>
         <p style="font-family:'Gloria Hallelujah', cursive; font-size: 18px;">NOTE !!!: THIS IS JUST A BASIC ROADMAP. YOU CAN ADJUST THE ROADMAP ACCORDING TO YOUR PROJECT REQUIREMENTS</p>
     </div>
 </div>
